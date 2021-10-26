@@ -1,8 +1,14 @@
 import { Badge } from "@material-ui/core";
 import { Message, Notifications, Settings } from "@material-ui/icons";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Navbar.css";
-const Navbar = () => {
+const Navbar = ({ socket }) => {
+  const [notification, setNotification] = useStateate([]);
+  useEffect(() => {
+    socket.on("getNotification", (data) => {
+      setNotification((prev) => [...prev, data]);
+    });
+  }, [socket]);
   return (
     <div className="navbar">
       <span className="logo">Noti</span>

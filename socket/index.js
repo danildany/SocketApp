@@ -6,7 +6,7 @@ const io = new Server({
   },
 });
 let onlineUsers = [];
-const addNewUsers = (username, socketid) => {
+const addNewUser = (username, socketid) => {
   !onlineUsers.some((user) => user.username === username) &&
     onlineUsers.push({ username, socketid });
 };
