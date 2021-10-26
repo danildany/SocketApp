@@ -1,0 +1,39 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 50vh;
+  border-radius: 5px;
+  border: 0.5px solid springgreen;
+}
+.login {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+input {
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+button {
+  width: 60%;
+  padding: 10px;
+  background-color: springgreen;
+  border-style: none;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.username {
+  font-weight: bold;
+  color: springgreen;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
